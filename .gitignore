@@ -1,0 +1,22 @@
+__pycache__/
+*.pyc
+runtime/
+work/
+dist/
+node_modules/
+local-workspace/
+test-results/
+playwright-report/
+.env
+.env.*
+.venv/
+*.log
+*.tmp
+
+# Private local evidence and transfer staging
+docs/assets/live-*.png
+.chatx-*.part
+*.private-backup
+*.pem
+*.p12
+*.pfx

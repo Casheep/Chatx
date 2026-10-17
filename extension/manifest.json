@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Chatx",
+  "version": "0.1.16",
+  "description": "让 ChatGPT Chat 使用你本机的文件、终端和 GPU。",
+  "permissions": [
+    "nativeMessaging",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "打开 Chatx"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*"
+      ],
+      "js": [
+        "protocol.js",
+        "chat-dom.js",
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzIOEmA6GtmkpuKK/nJScTdpoUwXnAuKSE1tlnhWB2ieZbbGuOX609Zp4+RG2jHdXlwK8oAGQSp6yqEYawg++VwHI/+uykka3L6pE8APH28wi+OaJW1rzAs40xPgdBx8oBSRrAeQ8hg9tZ8PICaKlxJix24eJzFD8h5dpNpRrvp3/XBgtBE5BttH8e1ftXXtM77qGuSeHF//iaHwkRp+xkaXHyxjkN2+6add7CvhNxwnxWPlseqf+TgCoGaD5aIyvWBrN4e7/azPUtsTyS/A15+KSaYUuRABa3O6BBTAAYw4VyLrAes2p+nBN54ojEAadCVgdeGvubAdqm1OG7rw3wwIDAQAB"
+}
